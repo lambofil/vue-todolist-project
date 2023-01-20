@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+    <!-- Note that any html outside the id=app will not render because its not mounted from the app.js -->
+    <div id="app">
+
+        <h1>{{title}} is at {{location}}</h1>
+
+        <h2>We are {{studentsNo}} in class</h2>
+
+        <!-- <button @click="studentsNo++">ADD STUDENT</button> -->
+        <button v-on:click="studentsNo++">ADD STUDENT</button><br><br>
+        <button v-on:click="studentsNo--">DELETE STUDENT</button><br><br>
+        <!-- <button @click="studentsNo--">DELETE STUDENT</button> -->
+        <button @click="location = 'New Horizona Lagos'">CHANGE LOCATION TO LAGOS</button><br><br>
+        <button @click="changeLocation">Change Location To Abuja</button><br><br>
+        <button @click="changeTitle('Our Second Class')" >Change Title</button>
+
+        <!-- <h2>{{title}}</h2>
+        <h2>{{location}}</h2>
+        <h2>{{studentsNo}}</h2> -->
+    </div>
+
+
+    <script src="app.js"></script>
+</body>
+</html>
